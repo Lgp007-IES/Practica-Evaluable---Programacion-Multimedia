@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wm_bg_dark"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Cabecera (Conexion...) -->
+    <TextView
+        android:id="@+id/tvBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="CONEXIÓN ESTABLECIDA: NIKO"
+        android:textColor="@color/oneshot_yellow"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <!-- Mensaje de referencia -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="monospace"
+        android:text="&quot;You only have one shot.&quot;"
+        android:textColor="@color/wm_text_light"
+        android:textSize="13sp" />
+
+    <!-- Imagen centra -->
+    <ImageView
+        android:id="@+id/ivCentralOneShot"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/wm_surface"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sol_oneshot" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Dirección URL de destino:"
+        android:textColor="@color/oneshot_yellow"
+        android:textSize="12sp" />
+    <!-- Cuadro para introducir URL, por defecto la de wikiFandom -->
+    <EditText
+        android:id="@+id/etUrlMain"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/wm_surface"
+        android:fontFamily="monospace"
+        android:inputType="textUri"
+        android:paddingHorizontal="12dp"
+        android:text="https://oneshot.fandom.com"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <!-- Cuadrícula de 4 botones personalizados (2x2) -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:useDefaultMargins="true">
+
+        <!-- Botón A: Ir a Activity de Llamada -->
+        <ImageButton
+            android:id="@+id/btnIrLlamada"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/wm_purple_btn"
+            android:contentDescription="Llamada telefónica"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_call"
+            app:tint="@color/oneshot_yellow" />
+
+        <!-- Botón B: Abrir URL -->
+        <ImageButton
+            android:id="@+id/btnAbrirUrl"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/wm_blue_accent"
+            android:contentDescription="Abrir navegador web"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_compass"
+            app:tint="@color/oneshot_yellow" />
+
+        <!-- Botón C: Crear Alarma en 2 minutos -->
+        <ImageButton
+            android:id="@+id/btnCrearAlarma"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/wm_blue_accent"
+            android:contentDescription="Crear alarma en 2 minutos"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_lock_idle_alarm"
+            app:tint="@color/oneshot_yellow" />
+
+        <!-- Botón D (?): Abrir Google Maps -->
+        <ImageButton
+            android:id="@+id/btnAbrirMapa"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/wm_purple_btn"
+            android:contentDescription="Abrir ubicación en Google Maps"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_dialog_map"
+            app:tint="@color/oneshot_yellow" />
+
+    </GridLayout>
+
+    <!-- Leyenda de botones -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="monospace"
+        android:text="[Llamar]  [Web]  [Alarma +2m]  [Mapa]"
+        android:textColor="@color/wm_text_light"
+        android:textSize="11sp" />
+
+    <!-- Botón 6: Volver al primer Activity de configuración -->
+    <Button
+        android:id="@+id/btnVolverConfig"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/wm_surface"
+        android:fontFamily="monospace"
+        android:text="◄ VOLVER A CONFIGURACIÓN"
+        android:textColor="@color/oneshot_yellow" />
+
+</LinearLayout>

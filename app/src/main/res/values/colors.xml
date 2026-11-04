@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta OneShot / The World Machine -->
+    <color name="wm_bg_dark">#120826</color>        <!-- Fondo principal morado abismo -->
+    <color name="wm_surface">#24134A</color>        <!-- Fondo secundario / tarjetas -->
+    <color name="wm_blue_accent">#2D3A8C</color>    <!-- Azul índigo para botones -->
+    <color name="wm_purple_btn">#4A2574</color>     <!-- Morado para botones -->
+    <color name="oneshot_yellow">#FFE66D</color>    <!-- Amarillo Sol (textos e iconos) -->
+    <color name="oneshot_amber">#FFB800</color>     <!-- Amarillo intenso para resaltados -->
+    <color name="wm_text_light">#E2D4FF</color>     <!-- Lavanda claro para textos secundarios -->
+</resources>

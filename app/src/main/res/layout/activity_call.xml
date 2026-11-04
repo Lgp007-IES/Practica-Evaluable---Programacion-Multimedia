@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wm_bg_dark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Texto en grande según pide el punto 4.a -->
+    <TextView
+        android:id="@+id/tvTituloLlamada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="TRANSMISIÓN DE EMERGENCIA"
+        android:textColor="@color/oneshot_yellow"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvNumeroLlamada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Destino: 5555054455"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <!-- Botón con imagen de llamada telefónica -->
+    <ImageButton
+        android:id="@+id/btnEjecutarLlamada"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/wm_purple_btn"
+        android:contentDescription="Realizar llamada telefónica"
+        android:scaleType="fitCenter"
+        android:padding="24dp"
+        android:src="@android:drawable/sym_action_call"
+        app:tint="@color/oneshot_yellow" />
+
+    <Button
+        android:id="@+id/btnVolverMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/wm_surface"
+        android:fontFamily="monospace"
+        android:text="◄ VOLVER AL PANEL PRINCIPAL"
+        android:textColor="@color/wm_text_light" />
+
+</LinearLayout>
