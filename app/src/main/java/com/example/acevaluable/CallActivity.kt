@@ -49,13 +49,13 @@ class CallActivity : AppCompatActivity() {
     }
 
     private fun verificarPermisosYLlamar() {
-        // Punto 5: Diferenciar entre API inferior a 23 y API >= 23 (Marshmallow)
+        // Diferenciar entre API inferior a 23 y API >= 23
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             // API < 23: El permiso ya se concedió al instalar la app desde el Manifest
             Toast.makeText(this, "API < 23 detectada: Llamando sin pedir permiso en ejecución", Toast.LENGTH_SHORT).show()
             realizarLlamadaDirecta()
         } else {
-            // API >= 23: Es obligatorio verificar y solicitar el permiso en tiempo de ejecución
+            // API >= 23: Es obligatorio verificar y solicitar el permiso
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
                 realizarLlamadaDirecta()
             } else {

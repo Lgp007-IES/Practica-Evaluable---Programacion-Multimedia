@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentWeb)
         }
 
-        // Crear Alarma para que suene en 2 minutos
+        // Crear Alarma para que suene en 1 minutos
         btnCrearAlarma.setOnClickListener {
             val calendario = Calendar.getInstance()
             calendario.add(Calendar.MINUTE, 1) // Sumamos 2 minutos a la hora actual
@@ -73,7 +73,6 @@ class MainActivity : AppCompatActivity() {
 
         // Abrir ubicación en Google Maps
         btnAbrirMapa.setOnClickListener {
-            // Ubicación personalizada: La Torre (ejemplo en el centro o coordenadas con etiqueta)
             val geoUri = Uri.parse("geo:0,0?q=37.76922,-3.79028(Jaén)")
             val intentMapa = Intent(Intent.ACTION_VIEW, geoUri)
             startActivity(intentMapa)
@@ -88,8 +87,6 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
-
-    // Por si se vuelve a la actividad con el flag SINGLE_TOP
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         val tvBienvenida = findViewById<TextView>(R.id.tvBienvenida)
